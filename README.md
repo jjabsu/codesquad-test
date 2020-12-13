@@ -29,6 +29,7 @@
 
 ## 실행결과
 
-![step3_1]https://github.com/jjabsu/codesquad-test/blob/main/%EC%9E%85%EB%A0%A5.png
-![step3_2]https://github.com/jjabsu/codesquad-test/blob/main/%EB%9E%9C%EB%8D%A4.png
-![step3_3]https://github.com/jjabsu/codesquad-test/blob/main/%EA%B2%BD%EA%B3%BC%EC%8B%9C%EA%B0%84.png
+![입력](https://user-images.githubusercontent.com/48144688/102012776-a99a2000-3d8f-11eb-824c-34e2c8695620.png)
+![경과시간](https://user-images.githubusercontent.com/48144688/102012777-aacb4d00-3d8f-11eb-8812-482011e54c55.png)
+![랜덤](https://user-images.githubusercontent.com/48144688/102012778-ab63e380-3d8f-11eb-871c-c57bc75cd4e4.png)
+
