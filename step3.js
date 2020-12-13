@@ -260,3 +260,117 @@ function downInverted() {
     y = counterClockRotate(y)
 }
 ////////////////////////////////////////////////////////////////////////////
+
+
+
+function checkCommand(input) {
+
+    switch (input) {
+        case ("F"):
+            frontClockWise()
+            break;
+
+        case ("F'"):
+            frontInverted();
+            break;
+
+        case ("R"):
+            rightClockWise()
+            break;
+
+        case ("R'"):
+            rightInverted()
+            break;
+
+        case ("U"):
+            upClockWise()
+            break;
+
+        case ("U'"):
+            upInverted()
+            break;
+
+        case ("B"):
+            bottomClockWise()
+            break;
+
+        case ("B'"):
+            bottomInverted()
+            break;
+
+        case ("L"):
+            leftClockWise()
+            break;
+
+        case ("L'"):
+            leftInverted()
+            break;
+
+        case ("D"):
+            downClockWise()
+            break;
+
+        case ("D'"):
+            downInverted()
+            break;
+
+        case "Q":
+            printEndComment();
+            break;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+let command = document.querySelector("#command")
+let commandBtn = document.querySelector("#commandBtn")
+let init = document.querySelector("#init")
+let totalCommand = document.querySelector("#totalCommand")
+let play = document.querySelector("#play")
+let mixBtn = document.querySelector("#mixBtn")
+let allCommandArr = [];
+let commandArr = [];
+
+commandBtn.onclick = function () {
+    commandArr = command.value.split("")
+    for (let i = 0; i < commandArr.length; i++) {
+        if (commandArr[i] === "'") {
+            commandArr[i - 1] += "'";
+            commandArr.splice(i, 1)
+        }
+    }
+    console.log(commandArr)
+    for (let i = 0; i < commandArr.length; i++) {
+        checkCommand(commandArr[i]);
+        printView(commandArr[i]);
+        allCommandArr.push(commandArr[i])
+    }
+    totalCommand.innerHTML = `입력한 커맨드 CUBE>> ${commandArr.join("")}`;
+    command.value = '';
+}
+
+
+init.innerHTML = `(초기 상태 출력)<br> &emsp;&emsp;&emsp;${w[0].join(" ")}<br>&emsp;&emsp;&emsp;${w[1].join(" ")} <br>&emsp;&emsp;&emsp;${w[2].join(" ")}<br>
+                    ${o[0].join(" ")}&nbsp${g[0].join(" ")}&nbsp${r[0].join(" ")}&nbsp${b[0].join(" ")} <br>
+                    ${o[1].join(" ")}&nbsp${g[1].join(" ")}&nbsp${r[1].join(" ")}&nbsp${b[1].join(" ")} <br>
+                    ${o[2].join(" ")}&nbsp${g[2].join(" ")}&nbsp${r[2].join(" ")}&nbsp${b[2].join(" ")} <br>
+                    &emsp;&emsp;&emsp;${y[0].join(" ")}<br>&emsp;&emsp;&emsp;${y[1].join(" ")} <br>&emsp;&emsp;&emsp;${y[2].join(" ")}<br>`
+
+function printView(command) {
+    let div = document.createElement("div")
+    div.innerHTML = `<br>현재 커맨드${command}<br><br> &emsp;&emsp;&emsp;${w[0].join(" ")}<br>&emsp;&emsp;&emsp;${w[1].join(" ")} <br>&emsp;&emsp;&emsp;${w[2].join(" ")}<br>
+                    ${o[0].join(" ")}&nbsp${g[0].join(" ")}&nbsp${r[0].join(" ")}&nbsp${b[0].join(" ")} <br>
+                    ${o[1].join(" ")}&nbsp${g[1].join(" ")}&nbsp${r[1].join(" ")}&nbsp${b[1].join(" ")} <br>
+                    ${o[2].join(" ")}&nbsp${g[2].join(" ")}&nbsp${r[2].join(" ")}&nbsp${b[2].join(" ")} <br>
+                    &emsp;&emsp;&emsp;${y[0].join(" ")}<br>&emsp;&emsp;&emsp;${y[1].join(" ")} <br>&emsp;&emsp;&emsp;${y[2].join(" ")}<br>`
+    play.appendChild(div)
+}
+
+
+function printEndComment() {
+    play.innerHTML = `경과시간: <br>
+                    조작갯수: ${allCommandArr.length} <br>
+                    이용해주셔서 감사합니다.`
+
+}
+
+
