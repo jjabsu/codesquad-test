@@ -103,7 +103,7 @@ class CubeData {
                 break;
 
             case "Q":
-                console.log("BYE~")
+                alert("BYE~")
                 break;
         }
     }
