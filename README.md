@@ -9,7 +9,7 @@
 <br>
 
 ## 실행결과
-![step1](https://i.postimg.cc/636jv4vY/mastertest-step1.png)
+
 
 <br>
 <br>
@@ -22,7 +22,6 @@
 <br>
 
 ## 실행결과
-![step2](https://i.postimg.cc/wvB9qV9V/mastertest-step2.png)
 
 <br>
 <br>
@@ -38,7 +37,6 @@
 <br>
 
 ## 실행결과
-![step3_1](https://i.postimg.cc/wT9kkqhn/mastertest-step3.png)
-<br>...중간 과정 생략 <br>
-
-![step3_2](https://i.postimg.cc/dQ2BdkT8/mastertest-step3-2.png)
+![입력](https://user-images.githubusercontent.com/48144688/102012509-3512b180-3d8e-11eb-89e4-c2c3c29ed8cf.png)
+![경과시간](https://user-images.githubusercontent.com/48144688/102012570-92a6fe00-3d8e-11eb-873f-82dc50780f00.png)
+![랜덤](https://user-images.githubusercontent.com/48144688/102012565-8fac0d80-3d8e-11eb-9013-d0f858be21cc.png)
