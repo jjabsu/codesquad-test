@@ -70,3 +70,33 @@ function addToColumn2(arr, color) {
         color[i].push(arr[i])
     }
 }
+
+//배열 시계방향회전
+function clockRotate(side) {
+    let temp = [
+        [],
+        [],
+        []
+    ]
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            temp[i][j] = side[3 - j - 1][i]
+        }
+    }
+    return temp
+}
+
+//배열 반시계방향회전
+function counterClockRotate(side) {
+    let temp = [
+        [],
+        [],
+        []
+    ]
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            temp[i][j] = side[j][3 - i - 1]
+        }
+    }
+    return temp
+}
