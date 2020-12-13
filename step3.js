@@ -122,7 +122,7 @@ function frontInverted() {
 
     w[2] = rStorage
     addToColumn0(yStorage, r)
-    o[0] = oStorage
+    y[0] = oStorage
     addToColumn2(wStorage, o)
     g = counterClockRotate(g)
 }
