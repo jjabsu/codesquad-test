@@ -444,5 +444,6 @@ reset.onclick = function () {
                     &emsp;&emsp;&emsp;${y[0].join(" ")}<br>&emsp;&emsp;&emsp;${y[1].join(" ")} <br>&emsp;&emsp;&emsp;${y[2].join(" ")}<br>`
 
     play.innerHTML = ''
+    totalCommand.innerHTML = ''
 }
 
