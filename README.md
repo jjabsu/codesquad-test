@@ -39,7 +39,5 @@
 
 ## 실행결과
 ![step3_1]https://github.com/jjabsu/codesquad-test/blob/main/%EC%9E%85%EB%A0%A5.png
-
-
 ![step3_2]https://github.com/jjabsu/codesquad-test/blob/main/%EB%9E%9C%EB%8D%A4.png
 ![step3_3]https://github.com/jjabsu/codesquad-test/blob/main/%EA%B2%BD%EA%B3%BC%EC%8B%9C%EA%B0%84.png
