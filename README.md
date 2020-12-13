@@ -5,11 +5,6 @@
 ## 동작과정
  1. prompt로 단어 방향 얼만큼 움직일지 받는다.
  2. 음수 일경우 절대값으로 만들어준 뒤 방향을 반대로 만들어준다.
-   
-<br>
-
-## 실행결과
-
 
 <br>
 <br>
@@ -18,10 +13,6 @@
 ## 동작과정 
  1. 각 명령어마다 push pop unshift shift를 이용해 함수구현
  2. 명령어에 '(어퍼스트로피)가 있는 경우에는 조건문으로 '앞에 엘리먼트에 '를 추가 한후 splice를 이용해서 '를 제거하였다.
-
-<br>
-
-## 실행결과
 
 <br>
 <br>
@@ -37,6 +28,7 @@
 <br>
 
 ## 실행결과
-![입력](https://user-images.githubusercontent.com/48144688/102012509-3512b180-3d8e-11eb-89e4-c2c3c29ed8cf.png)
-![경과시간](https://user-images.githubusercontent.com/48144688/102012570-92a6fe00-3d8e-11eb-873f-82dc50780f00.png)
-![랜덤](https://user-images.githubusercontent.com/48144688/102012565-8fac0d80-3d8e-11eb-9013-d0f858be21cc.png)
+
+![step3_1]https://github.com/jjabsu/codesquad-test/blob/main/%EC%9E%85%EB%A0%A5.png
+![step3_2]https://github.com/jjabsu/codesquad-test/blob/main/%EB%9E%9C%EB%8D%A4.png
+![step3_3]https://github.com/jjabsu/codesquad-test/blob/main/%EA%B2%BD%EA%B3%BC%EC%8B%9C%EA%B0%84.png
