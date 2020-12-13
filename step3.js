@@ -1,6 +1,3 @@
-
-
-
 //left
 let o = [
     ["o", "o", "o"],
@@ -315,6 +312,7 @@ function checkCommand(input) {
             break;
 
         case "Q":
+            getTime();
             printEndComment();
             break;
     }
@@ -367,7 +365,7 @@ function printView(command) {
 
 
 function printEndComment() {
-    play.innerHTML = `경과시간: <br>
+    play.innerHTML = `경과시간: ${getTime()}<br>
                     조작갯수: ${allCommandArr.length} <br>
                     이용해주셔서 감사합니다.`
 
@@ -376,6 +374,7 @@ function printEndComment() {
 //섞기 기능
 
 mixBtn.onclick = scramble;
+let startTime;
 
 function scramble() {
     let randomNum = Math.floor(Math.random() * 10)
@@ -393,7 +392,7 @@ function scramble() {
                     ${o[1].join(" ")}&nbsp${g[1].join(" ")}&nbsp${r[1].join(" ")}&nbsp${b[1].join(" ")} <br>
                     ${o[2].join(" ")}&nbsp${g[2].join(" ")}&nbsp${r[2].join(" ")}&nbsp${b[2].join(" ")} <br>
                     &emsp;&emsp;&emsp;${y[0].join(" ")}<br>&emsp;&emsp;&emsp;${y[1].join(" ")} <br>&emsp;&emsp;&emsp;${y[2].join(" ")}<br>`
-
+    startTime = setTime()
 }
 
 
@@ -447,3 +446,15 @@ reset.onclick = function () {
     totalCommand.innerHTML = ''
 }
 
+function setTime() {
+    return Date.now();
+}
+
+function getTime() {
+    let time = (Date.now() - startTime) / 1000;
+    let minute = Math.floor(time / 60);
+    let second = Math.floor((time / 60 - minute) * 60);
+    minute = minute.toString().length === 1 ? "0" + minute : minute;
+    second = second.toString().length === 1 ? "0" + second : second;
+    return `${minute}:${second}`;
+}
