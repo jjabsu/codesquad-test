@@ -109,3 +109,40 @@ class CubeData {
     }
 }
 
+const cube = new CubeData();
+
+let command = prompt("커맨드를 입력하세요. (대문자)\n U, U', R, R', L, L', B, B'");
+let commandArr = command.split("")
+
+let firstCube = document.querySelector("#firstCube")
+let commandLine = document.querySelector("#commandLine")
+let currentCube = document.querySelector("#currentCube")
+
+firstCube.innerHTML = `${cube.cube[0][0]} ${cube.cube[0][1]} ${cube.cube[0][2]} <br> 
+                        ${cube.cube[1][0]} ${cube.cube[1][1]} ${cube.cube[1][2]}<br> 
+                        ${cube.cube[2][0]} ${cube.cube[2][1]} ${cube.cube[2][2]}`
+
+commandLine.innerHTML = `CUBE>> ${command}`;
+
+
+
+
+function main() {
+    for (let i = 0; i < commandArr.length; i++) {
+        if (commandArr[i] === "'") {
+            commandArr[i - 1] += "'";
+            commandArr.splice(i, 1)
+        }
+    }
+    for (let i = 0; i < commandArr.length; i++) {
+        cube.play(commandArr[i])
+        let div = document.createElement('div')
+        div.innerHTML = `<br>${commandArr[i]} <br> ${cube.cube[0][0]} ${cube.cube[0][1]} ${cube.cube[0][2]} 
+                                <br> ${cube.cube[1][0]} ${cube.cube[1][1]} ${cube.cube[1][2]}
+                                <br> ${cube.cube[2][0]} ${cube.cube[2][1]} ${cube.cube[2][2]}`
+
+        currentCube.appendChild(div)
+    }
+}
+
+main();
