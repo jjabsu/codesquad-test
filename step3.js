@@ -396,3 +396,53 @@ function scramble() {
 
 }
 
+
+
+//초기화
+let reset = document.querySelector("#reset")
+reset.onclick = function () {
+    let o = [
+        ["o", "o", "o"],
+        ["o", "o", "o"],
+        ["o", "o", "o"]
+    ]
+
+    let g = [
+        ["g", "g", "g"],
+        ["g", "g", "g"],
+        ["g", "g", "g"]
+    ]
+
+    let w = [
+        ["w", "w", "w"],
+        ["w", "w", "w"],
+        ["w", "w", "w"]
+    ]
+
+    let r = [
+        ["r", "r", "r"],
+        ["r", "r", "r"],
+        ["r", "r", "r"]
+    ]
+
+    let y = [
+        ["y", "y", "y"],
+        ["y", "y", "y"],
+        ["y", "y", "y"]
+    ]
+
+    let b = [
+        ["b", "b", "b"],
+        ["b", "b", "b"],
+        ["b", "b", "b"]
+    ]
+
+    init.innerHTML = `초기화<br> &emsp;&emsp;&emsp;${w[0].join(" ")}<br>&emsp;&emsp;&emsp;${w[1].join(" ")} <br>&emsp;&emsp;&emsp;${w[2].join(" ")}<br>
+                    ${o[0].join(" ")}&nbsp${g[0].join(" ")}&nbsp${r[0].join(" ")}&nbsp${b[0].join(" ")} <br>
+                    ${o[1].join(" ")}&nbsp${g[1].join(" ")}&nbsp${r[1].join(" ")}&nbsp${b[1].join(" ")} <br>
+                    ${o[2].join(" ")}&nbsp${g[2].join(" ")}&nbsp${r[2].join(" ")}&nbsp${b[2].join(" ")} <br>
+                    &emsp;&emsp;&emsp;${y[0].join(" ")}<br>&emsp;&emsp;&emsp;${y[1].join(" ")} <br>&emsp;&emsp;&emsp;${y[2].join(" ")}<br>`
+
+    play.innerHTML = ''
+}
+
